@@ -1,0 +1,179 @@
+{
+    "info": {
+        "_postman_id": "31cee6c7-d331-43ee-9c2f-77691ae46d23",
+        "name": "Session-Booking-REST-API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "http://localhost:3000/users",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:3000/users",
+                    "path": [
+                        "users"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"fullName\": \"ashu\",\n  \"email\": \" ashushar222@gmail.COM \",\n  \"phone\": \"8630221456\"\n}"
+                }
+            }
+        },
+        {
+            "name": "http://localhost:3000/teachers",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:3000/teachers",
+                    "path": [
+                        "teachers"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"email\": \"  bitgEEK47@gmail.com \"\n}"
+                }
+            }
+        },
+        {
+            "name": "http://localhost:3000/sessions",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:3000/sessions",
+                    "path": [
+                        "sessions"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"email\": \"  bitgeek@GMAIL.COM \",\n  \"startTime\": \"09:30\",\n  \"endTime\": \"15:00\",\n  \"date\": \"2026-11-20\"\n}"
+                }
+            }
+        },
+        {
+            "name": "http://localhost:3000/sessions/available?dateTimeStamp=",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/sessions/available?dateTimeStamp=2026-11-20",
+                    "query": [
+                        {
+                            "key": "dateTimeStamp",
+                            "value": "2026-11-20"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "sessions",
+                        "available"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "http://localhost:3000/sessions/6afca8c22f0242fcf676bdb/book",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:3000/sessions/6afca951527694a50b00e4e1/book",
+                    "path": [
+                        "sessions",
+                        "6afca951527694a50b00e4e1",
+                        "book"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"email\": \"ASHUSHA22@gmail.com\"\n}"
+                }
+            }
+        },
+        {
+            "name": "http://localhost:3000/sessions/6afca951527694a50b00e4e1/complete",
+            "request": {
+                "method": "PATCH",
+                "url": {
+                    "raw": "http://localhost:3000/sessions/6afca951527694a50b00e4e1/complete",
+                    "path": [
+                        "sessions",
+                        "6afca951527694a50b00e4e1",
+                        "complete"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "http://localhost:3000/users/6afc6abdb43d138835ee823/sessions",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/users/6afc6abdb43d138835ee8239/sessions",
+                    "path": [
+                        "users",
+                        "6afc6abdb43d138835ee8239",
+                        "sessions"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        }
+    ]
+}
